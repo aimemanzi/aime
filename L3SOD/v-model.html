@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="#bind">
+    <h2>data binding in text area</h2>
+    <input type="text" v-model="GAD">
+    <h3>{{GAD}}</h3>
+    <hr>
+    <textarea v-model="textmessage"></textarea>
+    <h1>{{welcome to sjitc}}</h1>
+    <hr/>
+    </div>
+    <script>
+        var vm = new vue({
+            el:'#bind',
+            data:{
+                name:"GAD",
+                textmessage : "welcome to sjitc",
+            }
+        })
+    </script>
+</body>
+</html>
