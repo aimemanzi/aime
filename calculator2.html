@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body{
+            background-color: rgb(173, 197, 197);
+        }
+        .first{
+            text-align: center;
+            background-color: rgb(245, 244, 243);
+            border-radius: 20px;
+            height: 400px;
+            width: 30%;
+            margin-left: 440px;
+            padding-top: 76px;
+        }
+        .project1{
+            background-color: green;
+            color: white;
+            border-radius: 4px;
+            width: 100px;
+            height: 30px;
+        }
+        .project2{
+            background-color: red;
+            color: white;
+            border-radius: 4px;
+            width: 100px;
+            height: 30px;
+        }
+        .project3{
+            background-color: blue;
+            border-radius: 4px;
+            color: white;
+            width: 100px;
+            height: 30px;
+        }
+        .project4{
+            background-color: yellow;
+            height: 40px;
+            width: 300px;
+            border-radius: 4px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="first">
+    <h2><u>simple calculator</u></h2>
+    <input type="text" placeholder="first number" id="num1"><br><br>
+    <input type="text" placeholder="second number" id="num2"><br><br>
+    <button onclick="add()" class="project1">Add</button>
+    <button onclick="sub()" class="project2">Subtract</button>
+    <button onclick="mul()" class="project3">Multiply</button><br><br>
+    <button onclick="div()" class="project4">Divide</button>
+    <p id="result"></p>
+    </div>
+   <script>
+         function add (){
+            let num1 = Number (document.getElementById('num1').value);
+            let num2 = Number ( document.getElementById('num2').value);
+            let sum = num1 + num2;
+            document.getElementById('result').innerText= `result: ${sum}`;
+         }
+
+         function sub (){
+            let num1 = Number (document.getElementById('num1').value);
+            let num2 = Number ( document.getElementById('num2').value);
+            let difference = num1 - num2;
+            document.getElementById('result').innerText= `result: ${difference}`;
+         }
+
+         function mul (){
+            let num1 = Number (document.getElementById('num1').value);
+            let num2 = Number ( document.getElementById('num2').value);
+            let product = num1 * num2;
+            document.getElementById('result').innerText= `result: ${product}`;
+         }
+
+         function div (){
+            let num1 = Number (document.getElementById('num1').value);
+            let num2 = Number ( document.getElementById('num2').value);
+            let quotient = num1 / num2;
+            document.getElementById('result').innerText= `result: ${quotient}`;
+         }
+    </script>
+</body>
+</html>
